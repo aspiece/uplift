@@ -518,8 +518,15 @@
       ].map(s => s.toLowerCase());
 
       document.querySelectorAll('.topics li').forEach(li => {
-        const txt = li.textContent.trim().toLowerCase();
-        if (gradedItems.some(name => txt.includes(name))) {
+        const raw = li.textContent.trim().toLowerCase();
+        const normalized = raw.replace(/^assignment:\s*/, '').trim();
+        const candidates = [
+          raw,
+          normalized,
+          normalized ? `${normalized} assignment` : ''
+        ].filter(Boolean);
+
+        if (candidates.some(txt => gradedItems.some(name => txt.includes(name)))) {
           li.innerHTML += ' <span class="graded-badge">Graded</span>';
         }
       });
@@ -608,7 +615,9 @@
       function pill(type) { return `<span class="pill ${type.toLowerCase()}">${type}</span>`; }
       function keyPill(k) {
         if (!k) return '';
-        const cls = k.toLowerCase().includes('rubric') ? 'rubric' : 'key';
+        const lower = k.toLowerCase();
+        if (lower.includes('key-lms')) return '';
+        const cls = lower.includes('rubric') ? 'rubric' : 'key';
         return `<span class="pill ${cls}">${k}</span>`;
       }
 
