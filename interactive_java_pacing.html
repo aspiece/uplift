@@ -494,13 +494,15 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const gradedItems = [
-        "Semester 2 Readiness Quiz", "OOP Concepts Quiz", "Inheritance and Polymorphism Quiz",
-        "Abstract Classes and Interfaces Quiz", "Exception Handling Quiz", "Collections Framework Quiz",
-        "Recursion Quiz", "Sorting and Searching Quiz", "Capstone Project Proposal",
-        "Capstone Project Implementation", "Capstone Project Checkpoint", "Capstone Project Code Review",
-        "Capstone Project Documentation", "Capstone Project Testing Report", "Capstone Project Presentation",
-        "Spring Course Review Quiz", "Advanced Java Topics Quiz", "Final Capstone Revisions",
-        "Semester 2 Final Exam", "End of Course Survey", "Participation"
+        "Eclipse Quiz", "Print Statements Quiz", "Primitive Data Types Quiz", "Short, Int and Long Quiz",
+        "Float, Double, Char & Boolean Quiz", "Getting Started in Java Quiz", "User Input Quiz",
+        "Module 2 Mad Lib Assignment", "Global Variables Quiz", "RockPaperScissors Quiz",
+        "Module 2 FizzBuzz Assignment", "Methods Quiz", "Do While Quiz", "Module 3 Guess My Number Assignment",
+        "Stick Game Quiz", "Computers Turn Quiz", "Module 3 Stick Game Assignment", "Card Shuffler Quiz",
+        "Shuffle and Deal Quiz", "Battleship Quiz", "Module 4 BattleShip Assignment", "TicTacToe Quiz",
+        "X & O Quiz", "Action Quiz", "Module 5 TicTacToe Assignment", "Picture Puzzle Quiz",
+        "Switching Pieces Quiz", "Module 6 PicturePuzzler Assignment", "Semester Exam",
+        "End of Course Survey", "Participation"
       ].map(s => s.toLowerCase());
 
       document.querySelectorAll('.topics li').forEach(li => {
@@ -517,63 +519,75 @@
     document.addEventListener('DOMContentLoaded', function () {
       const gradedByWeek = {
         1: [
-          { name: "Semester 2 Readiness Quiz", type: "Assessment", key: "Key-LMS" }
+          { name: "Getting Started in Java Quiz", type: "Assessment", key: "Key-LMS" },
+          { name: "Eclipse Quiz", type: "Assessment", key: "Key-LMS" },
+          { name: "Print Statements Quiz", type: "Assessment", key: "Key-LMS" }
         ],
         2: [
-          { name: "OOP Concepts Quiz", type: "Assessment", key: "Key-LMS" }
+          { name: "Primitive Data Types Quiz", type: "Assessment", key: "Key-LMS" },
+          { name: "Short, Int and Long Quiz", type: "Assessment", key: "Key-LMS" },
+          { name: "Float, Double, Char & Boolean Quiz", type: "Assessment", key: "Key-LMS" }
         ],
         3: [
-          { name: "Inheritance and Polymorphism Quiz", type: "Assessment", key: "Key-LMS" }
+          { name: "User Input Quiz", type: "Assessment", key: "Key-LMS" }
         ],
         4: [
-          { name: "Abstract Classes and Interfaces Quiz", type: "Assessment", key: "Key-LMS" }
+          { name: "Module 2 Mad Lib Assignment", type: "Assignment", key: "Rubric" }
         ],
         5: [
-          { name: "Exception Handling Quiz", type: "Assessment", key: "Key-LMS" }
+          { name: "Global Variables Quiz", type: "Assessment", key: "Key-LMS" },
+          { name: "RockPaperScissors Quiz", type: "Assessment", key: "Key-LMS" }
         ],
         6: [
-          { name: "Collections Framework Quiz", type: "Assessment", key: "Key-LMS" }
+          { name: "Module 2 FizzBuzz Assignment", type: "Assignment", key: "Rubric" }
         ],
         7: [
-          { name: "Recursion Quiz", type: "Assessment", key: "Key-LMS" }
+          { name: "Methods Quiz", type: "Assessment", key: "Key-LMS" },
+          { name: "Do While Quiz", type: "Assessment", key: "Key-LMS" }
         ],
         8: [
-          { name: "Sorting and Searching Quiz", type: "Assessment", key: "Key-LMS" }
+          { name: "Module 3 Stick Game Assignment", type: "Assignment", key: "Rubric" }
         ],
         9: [
-          { name: "Capstone Project Proposal", type: "Assignment", key: "Rubric" }
+          { name: "Computers Turn Quiz", type: "Assessment", key: "Key-LMS" },
+          { name: "Stick Game Quiz", type: "Assessment", key: "Key-LMS" },
+          { name: "Module 3 Guess My Number Assignment", type: "Assignment", key: "Rubric" }
         ],
         10: [
-          { name: "Capstone Project Implementation", type: "Assignment", key: "Rubric" }
+          { name: "Card Shuffler Quiz", type: "Assessment", key: "Key-LMS" }
         ],
         11: [
+          // Spring Break — no graded items
         ],
         12: [
-          { name: "Capstone Project Checkpoint", type: "Assignment", key: "Rubric" }
+          { name: "Shuffle and Deal Quiz", type: "Assessment", key: "Key-LMS" }
         ],
         13: [
-          { name: "Capstone Project Code Review", type: "Assessment", key: "Key-LMS" }
+          { name: "Battleship Quiz", type: "Assessment", key: "Key-LMS" },
+          { name: "Module 4 BattleShip Assignment", type: "Assignment", key: "Rubric" }
         ],
         14: [
-          { name: "Capstone Project Documentation", type: "Assignment", key: "Rubric" }
+          { name: "TicTacToe Quiz", type: "Assessment", key: "Key-LMS" }
         ],
         15: [
-          { name: "Capstone Project Testing Report", type: "Assignment", key: "Rubric" }
+          { name: "X & O Quiz", type: "Assessment", key: "Key-LMS" },
+          { name: "Module 5 TicTacToe Assignment", type: "Assignment", key: "Rubric" }
         ],
         16: [
-          { name: "Capstone Project Presentation", type: "Assignment", key: "Rubric" }
+          { name: "Action Quiz", type: "Assessment", key: "Key-LMS" }
         ],
         17: [
-          { name: "Spring Course Review Quiz", type: "Assessment", key: "Key-LMS" }
+          { name: "Picture Puzzle Quiz", type: "Assessment", key: "Key-LMS" }
         ],
         18: [
-          { name: "Advanced Java Topics Quiz", type: "Assessment", key: "Key-LMS" }
+          { name: "Switching Pieces Quiz", type: "Assessment", key: "Key-LMS" },
+          { name: "Module 6 PicturePuzzler Assignment", type: "Assignment", key: "Rubric" }
         ],
         19: [
-          { name: "Final Capstone Revisions", type: "Assignment", key: "Rubric" }
+          // Reserved / no graded items this week
         ],
         20: [
-          { name: "Semester 2 Final Exam", type: "Assessment", key: "Key-LMS" },
+          { name: "Semester Exam", type: "Assessment", key: "Key-LMS" },
           { name: "End of Course Survey", type: "Survey", key: "Rubric" },
           { name: "Participation", type: "Assignment", key: "Rubric" }
         ]
