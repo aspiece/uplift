@@ -99,6 +99,36 @@
         .emoji {
             margin-right: 6px;
         }
+
+        .video-grid {
+            display: grid;
+            gap: 14px;
+            margin-top: 14px;
+        }
+
+        .video-item h3 {
+            margin: 0 0 8px;
+            font-size: 1rem;
+            color: var(--text);
+        }
+
+        .video-wrap {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-wrap iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
     </style>
 </head>
 
@@ -106,30 +136,47 @@
     <main class="page">
         <section class="hero">
             <h1>Intro to Java: Student Resource Hub</h1>
-            <p class="subtitle">Use these links if Eclipse does not work on your device (especially Chromebooks), and
-                for support on your first assignment: Mad Libs.</p>
+            <p class="subtitle">Follow these steps to get started in CodeHS, complete your first assignment (MadLibs),
+                and submit your work to Accellerate.</p>
         </section>
 
         <section class="card">
-            <h2><span class="emoji">🧰</span>Web IDE (Backup)</h2>
-            <p>Trouble with Eclipse? Use the CodeHS Sandbox to write and run Java in the browser:</p>
-            <ul>
-                <li><a href="https://codehs.com/signup/individual/free" target="_blank" rel="noopener noreferrer">👉
-                        Sign up for a CodeHS account</a></li>
-                <li><a href="https://drive.google.com/file/d/176tFHJqatqlixlwkDoNYdGx0YwrxgkNv/view?usp=sharing"
-                        target="_blank" rel="noopener noreferrer">👉 Video: Getting Started in CodeHS</a></li>
-                <li><a href="https://codehs.com/explore/sandbox" target="_blank" rel="noopener noreferrer">👉 CodeHS
-                        Sandbox</a></li>
-            </ul>
+            <h2><span class="emoji">🚀</span>Start Here: CodeHS + MadLibs</h2>
+            <p>Use this checklist in order, especially if you are on a Chromebook and cannot use Eclipse.</p>
+            <ol>
+                <li><a href="https://codehs.com/signup/individual/free" target="_blank" rel="noopener noreferrer">Create
+                        your free CodeHS account</a>.</li>
+                <li>Watch the embedded videos below.</li>
+                <li>Open the <a href="https://codehs.com/explore/sandbox" target="_blank"
+                        rel="noopener noreferrer">CodeHS Sandbox</a> and make sure Java is selected.</li>
+                <li>Open your first assignment starter file: <a
+                        href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=MadLibs.java"
+                        target="_blank" rel="noopener noreferrer">MadLibs.java</a>.</li>
+                <li>Use the embedded MadLibs walkthrough for extra support as needed.</li>
+                <li>Submit your finished MadLibs work to Accellerate when you are done.</li>
+            </ol>
+            <div class="video-grid">
+                <div class="video-item">
+                    <h3>Getting Started in CodeHS</h3>
+                    <div class="video-wrap">
+                        <iframe src="https://drive.google.com/file/d/176tFHJqatqlixlwkDoNYdGx0YwrxgkNv/preview"
+                            allow="autoplay" allowfullscreen title="Getting Started in CodeHS"></iframe>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <h3>Live Session - MadLib walkthrough</h3>
+                    <div class="video-wrap">
+                        <iframe src="https://drive.google.com/file/d/1Mgxmp54v4dyLtqr7p0JP0aD8rIHkGdPi/preview"
+                            allow="autoplay" allowfullscreen title="Live Session - MadLib walkthrough"></iframe>
+                    </div>
+                </div>
+            </div>
+            <p class="note">Tip: Test your program in CodeHS before submitting to Accellerate.</p>
         </section>
 
         <section class="card">
-            <h2><span class="emoji">📖</span>Project Support (Mad Libs + Starter Code)</h2>
+            <h2><span class="emoji">📚</span>More Starter Code</h2>
             <ul>
-                <li><a href="https://drive.google.com/file/d/1Mgxmp54v4dyLtqr7p0JP0aD8rIHkGdPi/view" target="_blank"
-                        rel="noopener noreferrer">👉 Live Session - Madlib walkthrough</a></li>
-                <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=MadLibs.java"
-                        target="_blank" rel="noopener noreferrer">👉 Starter Code for MadLibs assignment</a></li>
                 <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=FizzBuzz.java"
                         target="_blank" rel="noopener noreferrer">👉 Starter Code for FizzBuzz assignment</a></li>
                 <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=GuessMyNumber.java"
@@ -142,8 +189,7 @@
                 <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-swing" target="_blank"
                         rel="noopener noreferrer">👉 Starter Code for TicTacToe Project</a></li>
             </ul>
-            <p class="note">Tip: Start with the Mad Lib walkthrough and the main starter code before moving on to
-                TicTacToe.</p>
+            <p class="note">Finish MadLibs first, then move through these projects in pacing-guide order.</p>
         </section>
     </main>
 </body>
