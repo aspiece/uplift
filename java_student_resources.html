@@ -11,9 +11,21 @@
             --card: #ffffff;
             --text: #1f2937;
             --muted: #4b5563;
-            --accent: #00A99D;
+            --accent: #0f766e;
             --link: #1E73BE;
             --border: #e5e7eb;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
         }
 
         * {
@@ -26,6 +38,23 @@
             background: var(--bg);
             color: var(--text);
             line-height: 1.5;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 12px;
+            top: -48px;
+            background: #111827;
+            color: #ffffff;
+            padding: 10px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            z-index: 1000;
+        }
+
+        .skip-link:focus,
+        .skip-link:focus-visible {
+            top: 12px;
         }
 
         .page {
@@ -88,6 +117,35 @@
         a:hover,
         a:focus {
             text-decoration: underline;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #0f766e;
+            outline-offset: 2px;
+            border-radius: 6px;
+        }
+
+        .new-tab-note {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin: 0 0 10px;
+        }
+
+        .new-tab-icon {
+            font-weight: 700;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
 
         .note {
@@ -197,22 +255,25 @@
 </head>
 
 <body>
-    <main class="page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <main class="page" id="main-content" tabindex="-1">
         <section class="hero">
             <h1>Intro to Java: Student Resource Hub</h1>
             <p class="subtitle">Follow these steps to get started in CodeHS, complete your first assignment (MadLibs),
                 and submit your work to Accellerate.</p>
         </section>
 
-        <section class="wizard-card" id="studentWizard">
-            <h2><span class="emoji">🚀</span>Guided Setup</h2>
-            <div class="step-meta" id="stepMeta">Step 1 of 9</div>
+        <section class="wizard-card" id="studentWizard" aria-labelledby="guided-setup-title">
+            <h2 id="guided-setup-title"><span class="emoji">🚀</span>Guided Setup</h2>
+            <p class="new-tab-note"><span class="new-tab-icon" aria-hidden="true">↗</span> opens in new tab</p>
+            <div class="step-meta" id="stepMeta" role="status" aria-live="polite" aria-atomic="true">Step 1 of 9</div>
 
             <div class="step active">
                 <h3>Step 1: Create your CodeHS account</h3>
                 <p>Set up your free account first so you can access the Java sandbox.</p>
                 <p><a href="https://codehs.com/signup/individual/free" target="_blank" rel="noopener noreferrer">👉
-                        Create your free CodeHS account</a></p>
+                        Create your free CodeHS account <span class="new-tab-icon" aria-hidden="true">↗</span><span
+                            class="sr-only"> (opens in new tab)</span></a></p>
             </div>
 
             <div class="step">
@@ -228,14 +289,16 @@
                 <h3>Step 3: Open the Java sandbox</h3>
                 <p>Open Sandbox and make sure Java is selected for your coding environment.</p>
                 <p><a href="https://codehs.com/explore/sandbox" target="_blank" rel="noopener noreferrer">👉 Open CodeHS
-                        Sandbox</a></p>
+                        Sandbox <span class="new-tab-icon" aria-hidden="true">↗</span><span class="sr-only"> (opens in
+                            new tab)</span></a></p>
             </div>
 
             <div class="step">
                 <h3>Step 4: Open the MadLibs starter file</h3>
                 <p>Open the starter-code page, then select the MadLibs starter link.</p>
                 <p><a href="assignment_starter_code.html#madlibs" target="_blank" rel="noopener noreferrer">👉 Open
-                        starter code page (MadLibs)</a></p>
+                        starter code page (MadLibs) <span class="new-tab-icon" aria-hidden="true">↗</span><span
+                            class="sr-only"> (opens in new tab)</span></a></p>
             </div>
 
             <div class="step">
@@ -279,12 +342,14 @@
                 <h3>Step 9: More starter code</h3>
                 <p>All assignment starter links are now in one place.</p>
                 <p><a href="assignment_starter_code.html" target="_blank" rel="noopener noreferrer">👉 Open Assignment
-                        Starter Code page</a></p>
+                        Starter Code page <span class="new-tab-icon" aria-hidden="true">↗</span><span class="sr-only">
+                            (opens in new tab)</span></a></p>
             </div>
 
             <div class="wizard-controls">
-                <button class="wizard-btn" id="prevStep" type="button">← Previous</button>
-                <button class="wizard-btn" id="nextStep" type="button">Next →</button>
+                <button class="wizard-btn" id="prevStep" type="button" aria-label="Go to previous step">←
+                    Previous</button>
+                <button class="wizard-btn" id="nextStep" type="button" aria-label="Go to next step">Next →</button>
             </div>
         </section>
     </main>
@@ -303,6 +368,7 @@
             function renderStep() {
                 steps.forEach((step, index) => {
                     step.classList.toggle('active', index === currentStep);
+                    step.setAttribute('aria-hidden', String(index !== currentStep));
                 });
 
                 stepMeta.textContent = `Step ${currentStep + 1} of ${steps.length}`;
