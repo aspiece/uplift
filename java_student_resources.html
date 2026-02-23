@@ -129,6 +129,70 @@
             height: 100%;
             border: 0;
         }
+
+        .wizard-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 14px;
+        }
+
+        .step-meta {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        .step h3 {
+            margin: 0 0 8px;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .step p {
+            margin-bottom: 10px;
+        }
+
+        .step ul {
+            margin-bottom: 0;
+        }
+
+        .wizard-controls {
+            margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .wizard-btn {
+            border: 1px solid var(--border);
+            background: #fff;
+            color: var(--text);
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .wizard-btn:hover,
+        .wizard-btn:focus {
+            border-color: var(--accent);
+        }
+
+        .wizard-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 
@@ -140,58 +204,129 @@
                 and submit your work to Accellerate.</p>
         </section>
 
-        <section class="card">
-            <h2><span class="emoji">🚀</span>Start Here: CodeHS + MadLibs</h2>
-            <p>Use this checklist in order, especially if you are on a Chromebook and cannot use Eclipse.</p>
-            <ol>
-                <li><a href="https://codehs.com/signup/individual/free" target="_blank" rel="noopener noreferrer">Create
-                        your free CodeHS account</a>.</li>
-                <li>Watch the embedded videos below.</li>
-                <li>Open the <a href="https://codehs.com/explore/sandbox" target="_blank"
-                        rel="noopener noreferrer">CodeHS Sandbox</a> and make sure Java is selected.</li>
-                <li>Open your first assignment starter file: <a
-                        href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=MadLibs.java"
-                        target="_blank" rel="noopener noreferrer">MadLibs.java</a>.</li>
-                <li>Use the embedded MadLibs walkthrough for extra support as needed.</li>
-                <li>Submit your finished MadLibs work to Accellerate when you are done.</li>
-            </ol>
-            <div class="video-grid">
-                <div class="video-item">
-                    <h3>Getting Started in CodeHS</h3>
-                    <div class="video-wrap">
-                        <iframe src="https://drive.google.com/file/d/176tFHJqatqlixlwkDoNYdGx0YwrxgkNv/preview"
-                            allow="autoplay" allowfullscreen title="Getting Started in CodeHS"></iframe>
-                    </div>
-                </div>
-                <div class="video-item">
-                    <h3>Live Session - MadLib walkthrough</h3>
-                    <div class="video-wrap">
-                        <iframe src="https://drive.google.com/file/d/1Mgxmp54v4dyLtqr7p0JP0aD8rIHkGdPi/preview"
-                            allow="autoplay" allowfullscreen title="Live Session - MadLib walkthrough"></iframe>
-                    </div>
+        <section class="wizard-card" id="studentWizard">
+            <h2><span class="emoji">🚀</span>Guided Setup</h2>
+            <div class="step-meta" id="stepMeta">Step 1 of 8</div>
+
+            <div class="step active">
+                <h3>Step 1: Create your CodeHS account</h3>
+                <p>Set up your free account first so you can access the Java sandbox.</p>
+                <p><a href="https://codehs.com/signup/individual/free" target="_blank" rel="noopener noreferrer">👉
+                        Create your free CodeHS account</a></p>
+            </div>
+
+            <div class="step">
+                <h3>Step 2: Watch CodeHS setup video</h3>
+                <p>Watch this short video to learn how to navigate CodeHS quickly.</p>
+                <div class="video-wrap">
+                    <iframe src="https://drive.google.com/file/d/176tFHJqatqlixlwkDoNYdGx0YwrxgkNv/preview"
+                        allow="autoplay" allowfullscreen title="Getting Started in CodeHS"></iframe>
                 </div>
             </div>
-            <p class="note">Tip: Test your program in CodeHS before submitting to Accellerate.</p>
-        </section>
 
-        <section class="card">
-            <h2><span class="emoji">📚</span>More Starter Code</h2>
-            <ul>
-                <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=FizzBuzz.java"
-                        target="_blank" rel="noopener noreferrer">👉 Starter Code for FizzBuzz assignment</a></li>
-                <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=GuessMyNumber.java"
-                        target="_blank" rel="noopener noreferrer">👉 Starter Code for Guess My Number assignment</a>
-                </li>
-                <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=Battleship.java"
-                        target="_blank" rel="noopener noreferrer">👉 Starter Code for Battleship assignment</a></li>
-                <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=Sticks.java"
-                        target="_blank" rel="noopener noreferrer">👉 Starter Code for Sticks assignment</a></li>
-                <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-swing" target="_blank"
-                        rel="noopener noreferrer">👉 Starter Code for TicTacToe Project</a></li>
-            </ul>
-            <p class="note">Finish MadLibs first, then move through these projects in pacing-guide order.</p>
+            <div class="step">
+                <h3>Step 3: Open the Java sandbox</h3>
+                <p>Open Sandbox and make sure Java is selected for your coding environment.</p>
+                <p><a href="https://codehs.com/explore/sandbox" target="_blank" rel="noopener noreferrer">👉 Open CodeHS
+                        Sandbox</a></p>
+            </div>
+
+            <div class="step">
+                <h3>Step 4: Open the MadLibs starter file</h3>
+                <p>Use this direct link to open the first assignment starter code.</p>
+                <p><a href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=MadLibs.java"
+                        target="_blank" rel="noopener noreferrer">👉 Open MadLibs.java</a></p>
+            </div>
+
+            <div class="step">
+                <h3>Step 5: Use the MadLibs walkthrough</h3>
+                <p>Watch this if you need help completing the assignment.</p>
+                <div class="video-wrap">
+                    <iframe src="https://drive.google.com/file/d/1Mgxmp54v4dyLtqr7p0JP0aD8rIHkGdPi/preview"
+                        allow="autoplay" allowfullscreen title="Live Session - MadLib walkthrough"></iframe>
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>Step 6: Download your .java file from CodeHS</h3>
+                <p>In CodeHS, open your completed <strong>MadLibs.java</strong> file.</p>
+                <ul>
+                    <li>Open the file menu or project/file options.</li>
+                    <li>Choose <strong>Download</strong> for the current file.</li>
+                    <li>Save the file on your Chromebook as <strong>MadLibs.java</strong>.</li>
+                    <li>Verify the file downloaded before moving on.</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>Step 7: Submit to Accellerate</h3>
+                <p>Upload your downloaded <strong>MadLibs.java</strong> file to Accellerate and submit the assignment.
+                </p>
+            </div>
+
+            <div class="step">
+                <h3>Step 8: More starter code</h3>
+                <p>After MadLibs, use these starter links for upcoming assignments:</p>
+                <ul>
+                    <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=FizzBuzz.java"
+                            target="_blank" rel="noopener noreferrer">👉 Starter Code for FizzBuzz assignment</a></li>
+                    <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=GuessMyNumber.java"
+                            target="_blank" rel="noopener noreferrer">👉 Starter Code for Guess My Number assignment</a>
+                    </li>
+                    <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=Battleship.java"
+                            target="_blank" rel="noopener noreferrer">👉 Starter Code for Battleship assignment</a></li>
+                    <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-main-2?filepath=Sticks.java"
+                            target="_blank" rel="noopener noreferrer">👉 Starter Code for Sticks assignment</a></li>
+                    <li><a href="https://codehs.com/sandbox/lavenderyak4416/java-swing" target="_blank"
+                            rel="noopener noreferrer">👉 Starter Code for TicTacToe Project</a></li>
+                </ul>
+            </div>
+
+            <div class="wizard-controls">
+                <button class="wizard-btn" id="prevStep" type="button">← Previous</button>
+                <button class="wizard-btn" id="nextStep" type="button">Next →</button>
+            </div>
         </section>
     </main>
+
+    <script>
+        (function () {
+            const wizard = document.getElementById('studentWizard');
+            if (!wizard) return;
+
+            const steps = Array.from(wizard.querySelectorAll('.step'));
+            const prevButton = document.getElementById('prevStep');
+            const nextButton = document.getElementById('nextStep');
+            const stepMeta = document.getElementById('stepMeta');
+            let currentStep = 0;
+
+            function renderStep() {
+                steps.forEach((step, index) => {
+                    step.classList.toggle('active', index === currentStep);
+                });
+
+                stepMeta.textContent = `Step ${currentStep + 1} of ${steps.length}`;
+                prevButton.disabled = currentStep === 0;
+                nextButton.disabled = currentStep === steps.length - 1;
+            }
+
+            prevButton.addEventListener('click', function () {
+                if (currentStep > 0) {
+                    currentStep -= 1;
+                    renderStep();
+                }
+            });
+
+            nextButton.addEventListener('click', function () {
+                if (currentStep < steps.length - 1) {
+                    currentStep += 1;
+                    renderStep();
+                }
+            });
+
+            renderStep();
+        })();
+    </script>
 </body>
 
 </html>
