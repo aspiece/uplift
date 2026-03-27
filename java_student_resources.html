@@ -259,25 +259,40 @@
     <main class="page" id="main-content" tabindex="-1">
         <section class="hero">
             <h1>Intro to Java: CodeHS Setup & Submission Guide</h1>
-            <p class="subtitle">Follow this guided workflow to set up CodeHS, complete MadLibs, download your file,
-                and submit in the course.</p>
+            <p class="subtitle">Follow this guided workflow to set up CodeHS, complete MadLibs, download your file, and
+                submit in the course.</p>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="card" aria-labelledby="overview-title">
+            <h2 id="overview-title">Overview</h2>
+            <p>By the end of this guide, you will:</p>
+            <ul>
+                <li>Set up your free CodeHS account</li>
+                <li>Access and complete the MadLibs Java assignment</li>
+                <li>Download your completed <strong>MadLibs.java</strong> file</li>
+                <li>Submit your work to the course</li>
+            </ul>
+            <p class="note">No prior experience required. If you get stuck, see the help section at the end!</p>
         </section>
 
         <section class="wizard-card" id="studentWizard" aria-labelledby="guided-setup-title">
             <h2 id="guided-setup-title"><span class="emoji">🚀</span>Guided Setup</h2>
             <p class="new-tab-note"><span class="new-tab-icon" aria-hidden="true">↗</span> opens in new tab</p>
-            <div class="step-meta" id="stepMeta" role="status" aria-live="polite" aria-atomic="true">Step 1 of 9</div>
+            <div class="step-meta" id="stepMeta" role="status" aria-live="polite" aria-atomic="true">Step <span
+                    id="stepNumber">1</span> of 9</div>
 
-            <div class="step active">
-                <h3>Step 1: Create your CodeHS account</h3>
+
+            <div class="step active" aria-label="Step 1: Create your CodeHS account">
+                <h3><span class="sr-only">Step 1:</span> Create your CodeHS account</h3>
                 <p>Set up your free account first so you can access the Java sandbox.</p>
                 <p><a href="https://codehs.com/signup/individual/free" target="_blank" rel="noopener noreferrer">👉
                         Create your free CodeHS account <span class="new-tab-icon" aria-hidden="true">↗</span><span
                             class="sr-only"> (opens in new tab)</span></a></p>
             </div>
 
-            <div class="step">
-                <h3>Step 2: Watch CodeHS setup video</h3>
+            <div class="step" aria-label="Step 2: Watch CodeHS setup video">
+                <h3><span class="sr-only">Step 2:</span> Watch CodeHS setup video</h3>
                 <p>Watch this short video to learn how to navigate CodeHS quickly.</p>
                 <div class="video-wrap">
                     <iframe src="https://drive.google.com/file/d/176tFHJqatqlixlwkDoNYdGx0YwrxgkNv/preview"
@@ -285,35 +300,38 @@
                 </div>
             </div>
 
-            <div class="step">
-                <h3>Step 3: Open the Java sandbox</h3>
+            <div class="step" aria-label="Step 3: Open the Java sandbox">
+                <h3><span class="sr-only">Step 3:</span> Open the Java sandbox</h3>
                 <p>Open Sandbox and make sure Java is selected for your coding environment.</p>
                 <p><a href="https://codehs.com/explore/sandbox" target="_blank" rel="noopener noreferrer">👉 Open CodeHS
                         Sandbox <span class="new-tab-icon" aria-hidden="true">↗</span><span class="sr-only"> (opens in
                             new tab)</span></a></p>
             </div>
 
-            <div class="step">
-                <h3>Step 4: Open the MadLibs starter file</h3>
+            <div class="step" aria-label="Step 4: Open the MadLibs starter file">
+                <h3><span class="sr-only">Step 4:</span> Open the MadLibs starter file</h3>
                 <p>Open the starter-code page, then select the MadLibs starter link.</p>
                 <p><a href="assignment_starter_code.html#madlibs" target="_blank" rel="noopener noreferrer">👉 Open
                         starter code page (MadLibs) <span class="new-tab-icon" aria-hidden="true">↗</span><span
                             class="sr-only"> (opens in new tab)</span></a></p>
             </div>
 
-            <div class="step">
-                <h3>Step 5: Copy starter code into a new program</h3>
+            <div class="step" aria-label="Step 5: Copy starter code into a new program">
+                <h3><span class="sr-only">Step 5:</span> Copy starter code into a new program</h3>
                 <p>After opening the starter file, copy all code and place it into your own new program.</p>
                 <ul>
                     <li>Select all code in the starter file and copy it.</li>
-                    <li>Start a new Java program in CodeHS and name the file <strong>MadLibs.java</strong>.</li>
+                    <li>Start a new Java program in CodeHS and <strong>name the file exactly <span
+                                style="color:#d32f2f">MadLibs.java</span></strong> (case-sensitive, no spaces).</li>
                     <li>Paste the copied code into the new program file.</li>
                     <li>Run the program to confirm it works before editing.</li>
                 </ul>
+                <div class="note">Tip: Double-check your file is named <strong>MadLibs.java</strong> before moving on.
+                </div>
             </div>
 
-            <div class="step">
-                <h3>Step 6: Use the MadLibs walkthrough</h3>
+            <div class="step" aria-label="Step 6: Use the MadLibs walkthrough">
+                <h3><span class="sr-only">Step 6:</span> Use the MadLibs walkthrough</h3>
                 <p>Watch this if you need help completing the assignment.</p>
                 <div class="video-wrap">
                     <iframe src="https://drive.google.com/file/d/1Mgxmp54v4dyLtqr7p0JP0aD8rIHkGdPi/preview"
@@ -321,25 +339,39 @@
                 </div>
             </div>
 
-            <div class="step">
-                <h3>Step 7: Download your .java file from CodeHS</h3>
+            <div class="step" aria-label="Step 7: Download your .java file from CodeHS">
+                <h3><span class="sr-only">Step 7:</span> Download your <span style="color:#d32f2f">MadLibs.java</span>
+                    file from CodeHS</h3>
                 <p>In CodeHS, open your completed <strong>MadLibs.java</strong> file.</p>
                 <ul>
                     <li>Select <strong>More</strong> in the top-right corner.</li>
                     <li>Select <strong>Download</strong>.</li>
                     <li>Choose the <strong>.txt</strong> version of the file.</li>
-                    <li>Verify the file downloaded before moving on.</li>
+                    <li>Verify the file downloaded before moving on. <span class="note">Check that the file is named
+                            <strong>MadLibs.java.txt</strong> or <strong>MadLibs.java</strong> and contains your
+                            code.</span></li>
                 </ul>
             </div>
 
-            <div class="step">
-                <h3>Step 8: Submit to the course</h3>
-                <p>Upload your downloaded MadLibs file to the course and submit the assignment.
+            <div class="step" aria-label="Step 8: Submit to the course">
+                <h3><span class="sr-only">Step 8:</span> Submit to the course</h3>
+                <p>Upload your downloaded <strong>MadLibs.java</strong> file to the course and submit the assignment.
                 </p>
+                <ul>
+                    <li>Double-check your file is named <strong>MadLibs.java</strong> (not .txt unless required by your
+                        instructor).</li>
+                    <li>Open the file and confirm it contains your completed code.</li>
+                    <li>After uploading, review your submission:</li>
+                    <ul>
+                        <li>Did you upload the correct file?</li>
+                        <li>Is it named <strong>MadLibs.java</strong>?</li>
+                        <li>Does it contain your finished code?</li>
+                    </ul>
+                </ul>
             </div>
 
-            <div class="step">
-                <h3>Step 9: More starter code</h3>
+            <div class="step" aria-label="Step 9: More starter code">
+                <h3><span class="sr-only">Step 9:</span> More starter code</h3>
                 <p>All assignment starter links are now in one place.</p>
                 <p><a href="assignment_starter_code.html" target="_blank" rel="noopener noreferrer">👉 Open Assignment
                         Starter Code page <span class="new-tab-icon" aria-hidden="true">↗</span><span class="sr-only">
@@ -352,6 +384,19 @@
                 <button class="wizard-btn" id="nextStep" type="button" aria-label="Go to next step">Next →</button>
             </div>
         </section>
+
+        <!-- Help & Questions Section -->
+        <section class="card" aria-labelledby="help-title">
+            <h2 id="help-title">Need Help?</h2>
+            <p>If you get stuck or have questions at any step, don't hesitate to ask for help!</p>
+            <ul>
+                <li>Check the instructions above for tips and notes.</li>
+                <li>Ask your instructor or post in the course forum.</li>
+                <li>Double-check the checklist in Step 8 before submitting.</li>
+            </ul>
+            <p class="note">You're not alone—reach out if you need support!</p>
+        </section>
+        </section>
     </main>
 
     <script>
@@ -363,6 +408,7 @@
             const prevButton = document.getElementById('prevStep');
             const nextButton = document.getElementById('nextStep');
             const stepMeta = document.getElementById('stepMeta');
+            const stepNumber = document.getElementById('stepNumber');
             let currentStep = 0;
 
             function renderStep() {
@@ -371,6 +417,7 @@
                     step.setAttribute('aria-hidden', String(index !== currentStep));
                 });
 
+                if (stepNumber) stepNumber.textContent = currentStep + 1;
                 stepMeta.textContent = `Step ${currentStep + 1} of ${steps.length}`;
                 prevButton.disabled = currentStep === 0;
                 nextButton.disabled = currentStep === steps.length - 1;
