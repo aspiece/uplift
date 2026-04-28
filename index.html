@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uplift – Home</title>
+    <style>
+        :root {
+            --bg: #f5f7fb;
+            --card: #ffffff;
+            --text: #1f2937;
+            --muted: #4b5563;
+            --accent: #0f766e;
+            --link: #1E73BE;
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2.5rem 1rem 4rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: var(--accent);
+            margin-bottom: 0.4rem;
+        }
+
+        header p {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem 1.75rem;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.18s, transform 0.18s;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.10);
+            transform: translateY(-3px);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .card h2 {
+            font-size: 1.1rem;
+            color: var(--link);
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 3rem;
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Uplift – Resource Hub</h1>
+        <p>Click a card to open the page.</p>
+    </header>
+
+    <div class="grid">
+        <a class="card" href="java_student_resources.html">
+            <div class="card-icon">📖</div>
+            <h2>Java Student Resources</h2>
+            <p>Intro to Java CodeHS setup guide with student-facing reference materials.</p>
+        </a>
+
+        <a class="card" href="interactive_java_pacing.html">
+            <div class="card-icon">📅</div>
+            <h2>Java Pacing Guide</h2>
+            <p>Interactive week-by-week pacing guide for the Intro to Java course.</p>
+        </a>
+
+        <a class="card" href="assignment_starter_code.html">
+            <div class="card-icon">💻</div>
+            <h2>Assignment Starter Code</h2>
+            <p>Links to starter code and templates for Intro to Java assignments.</p>
+        </a>
+
+        <a class="card" href="DP/">
+            <div class="card-icon">🚢</div>
+            <h2>Battleship (DP Project)</h2>
+            <p>Java source files for the Battleship design-patterns project (Board, Ship, Coordinates, Difficulty).</p>
+        </a>
+    </div>
+
+    <footer>Uplift &copy; 2026</footer>
+</body>
+
+</html>
